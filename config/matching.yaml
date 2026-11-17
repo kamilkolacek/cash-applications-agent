@@ -1,0 +1,24 @@
+# Matching policy. Python applies these rules deterministically; anything outside them
+# becomes an exception for Claude to recommend on and a human to approve.
+
+# A match is auto-proposed only at or above this confidence. Auto-proposed matches still
+# wait for human approval before anything is posted.
+auto_apply_min_confidence: 0.90
+
+customer_name:
+  fuzzy_min: 0.70   # below this, the payer is treated as unidentified
+  auto_min: 0.92    # between fuzzy_min and auto_min, a name match is an exception
+
+tolerances:
+  # Agent authority to write off a shortfall without a person deciding it.
+  small_balance_writeoff_max: 10.00
+  # Intermediary bank fees deducted from incoming wires.
+  bank_fee_max_wire: 50.00
+
+combinations:
+  max_docs: 4          # largest set of open items tried when no reference is given
+  max_candidates: 12   # open items considered per customer for combinations
+
+# Remittance words that mark a shortfall as a customer-claimed deduction (short-pay)
+# rather than a partial payment.
+deduction_keywords: [DED, DEDUCT, DEDUCTION, LESS, MAKEGOOD, SHORT, DISPUTE, CHARGEBACK, CREDIT DUE]

@@ -1,0 +1,53 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/generate_data.py*)",
+      "Bash(python scripts/run_cash_app.py*)",
+      "Bash(python scripts/finalize_run.py*)",
+      "Bash(python scripts/status.py*)",
+      "Bash(python scripts/check_summary.py*)",
+      "Bash(python scripts/run_evals.py*)",
+      "Bash(make test)",
+      "Bash(make run)",
+      "Bash(make evals)",
+      "Bash(pytest*)",
+      "Bash(ruff*)",
+      "Read(./**)",
+      "Write(./outputs/runs/**)",
+      "Edit(./outputs/runs/**)"
+    ],
+    "deny": [
+      "Bash(*approve.py*)",
+      "Bash(make approve*)",
+      "Read(./tests/evals/answer_key.yaml)",
+      "Write(./data/**)",
+      "Edit(./data/**)",
+      "Write(./config/**)",
+      "Edit(./config/**)",
+      "Write(./outputs/runs/**/state.json)",
+      "Edit(./outputs/runs/**/state.json)",
+      "Write(./outputs/runs/**/audit.jsonl)",
+      "Edit(./outputs/runs/**/audit.jsonl)",
+      "Write(./outputs/runs/**/journal_entries.csv)",
+      "Edit(./outputs/runs/**/journal_entries.csv)",
+      "Write(./outputs/runs/**/approval.json)",
+      "Write(./outputs/runs/**/erp_import.csv)",
+      "Read(./.env)",
+      "Bash(curl*)",
+      "Bash(wget*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_numbers.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

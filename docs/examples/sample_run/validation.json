@@ -1,0 +1,48 @@
+{
+  "verdict": "PASS",
+  "checks": [
+    {
+      "check": "deposits_tie_to_bank_statement",
+      "status": "PASS",
+      "detail": "38 deposits totaling $6,188,951.06; bank statement shows 38 credits totaling $6,188,951.06"
+    },
+    {
+      "check": "unique_deposit_ids",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "check": "deposit_value_dates",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "check": "positive_deposits",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "check": "unique_doc_ids",
+      "status": "PASS",
+      "detail": "162 AR rows, 162 unique document IDs"
+    },
+    {
+      "check": "ar_open_amounts_valid",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "check": "ar_customers_exist",
+      "status": "PASS",
+      "detail": "ok"
+    },
+    {
+      "check": "remittances_link_to_deposits",
+      "status": "PASS",
+      "detail": "ok"
+    }
+  ],
+  "deposit_count": 38,
+  "deposit_total": "6188951.06",
+  "open_ar_total": "13907918.44"
+}

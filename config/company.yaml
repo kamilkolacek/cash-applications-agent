@@ -1,0 +1,18 @@
+# Lumina Streaming Co. (fictional). All data in this repo is synthetic.
+company: Lumina Streaming Co.
+entity: LuminaUS
+currency: USD
+bank_account: "100100 Cash - Operating (lockbox, ACH, wire)"
+
+# The cash receipt itself is booked by treasury (Dr 100100 Cash / Cr 120900 Unapplied Cash).
+# Cash application moves it from Unapplied Cash to the customer's open items.
+gl_accounts:
+  ar_trade:        {account: 120100, name: "AR - Trade"}
+  deductions:      {account: 120300, name: "AR - Customer Deductions (pending validation)"}
+  unapplied_cash:  {account: 120900, name: "Unapplied Cash"}
+  bank_fees:       {account: 610500, name: "Bank Fees"}
+  small_balance:   {account: 650200, name: "Small Balance Write-offs"}
+
+approval:
+  # Approval must be given by a named person. These names are refused.
+  blocked_approver_names: [claude, agent, ai, bot, system, automation, ""]

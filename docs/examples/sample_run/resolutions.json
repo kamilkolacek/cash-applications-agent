@@ -1,0 +1,76 @@
+{
+  "run_id": "2026-11-16_r01",
+  "prepared_by": "claude",
+  "resolutions": [
+    {
+      "exception_id": "EX-DEP-20261116-002",
+      "option_id": "APPLY_PARTIAL_LEAVE_OPEN",
+      "rationale": "Bluewater Telecom references INV-24191 and states this is installment 1 of 2 under an agreed payment plan. The invoice is valid and open, so apply the $155,000.00 received and leave $155,000.00 open for the second installment. Holding the cash would overstate the customer's past-due balance for no benefit.",
+      "follow_up": "Confirm the payment plan is documented and record the due date of installment 2 against INV-24191.",
+      "owner": "Partner Finance"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-003",
+      "option_id": "APPLY_TO_PAYER_DOC:INV-24518",
+      "rationale": "Pinecrest Studios paid $44,200.00 citing INV-24581, which belongs to Harbor Light Films, an unrelated customer. Pinecrest's own open item INV-24518 is for exactly $44,200.00, and 24581 vs 24518 is a transposition of the last two digits. Applying to Harbor Light's invoice would leave $17,700.00 open on the wrong customer and misstate both accounts.",
+      "follow_up": "Send Pinecrest the application for confirmation and ask them to correct the reference in their AP system.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-008",
+      "option_id": "APPLY_EXCESS:INV-24202",
+      "rationale": "Meridian Auto Group referenced only INV-24201 but paid $66,750.00. The excess of $4,750.00 equals the open balance of INV-24202 exactly, so the customer most likely paid both invoices and referenced one. Applying it closes both items; an on-account credit would leave INV-24202 aging while the cash sits beside it.",
+      "follow_up": "Include both invoices on the remittance confirmation to Meridian's AP team.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-012",
+      "option_id": "APPLY_TO_REFERENCED_DOC",
+      "rationale": "Orbit Holdings Inc paid $128,640.00 citing INV-24221 of Orbit Media EMEA Ltd, and the remittance says it is paying on behalf of Orbit Media EMEA. The customer master shows Orbit Holdings as the parent of Orbit Media EMEA, and the amount equals the invoice exactly. A parent paying a subsidiary's invoice is routine.",
+      "follow_up": "None required. Note the parent-pays arrangement on the Orbit Media EMEA account for future receipts.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-015",
+      "option_id": "APPLY_TO_CANDIDATE",
+      "rationale": "NRTHSTR MEDIA GRP is an abbreviation of Northstar Media Group (name score 0.90), and the $57,420.00 deposit equals the open balance of Northstar's INV-24211 exactly. No other customer's open item matches. Both the name and the exact amount point to the same customer.",
+      "follow_up": "Add 'NRTHSTR MEDIA GRP' as a bank alias for Northstar Media Group so future receipts match automatically.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-016",
+      "option_id": "HOLD_UNAPPLIED",
+      "rationale": "Solstice Insurance cited INV-24231, which was already paid on 2026-11-06 (ref ACH-1106-4471), and this deposit of $23,500.00 matches that invoice. This looks like a duplicate payment. Applying it to their other open item, INV-24232 for $18,250.00, would hide the duplicate and leave a residual; hold it until the customer says whether they want a refund or a credit.",
+      "follow_up": "Contact Solstice AP to confirm the duplicate payment and request refund or credit instructions; flag to Treasury as a potential refund.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-021",
+      "option_id": "HOLD_UNAPPLIED",
+      "rationale": "NORTHSIDE MEDIA GRP LLC is similar to Northstar Media Group (name score 0.80) but is a different word, not an abbreviation, and the $9,870.00 deposit does not equal any Northstar open item or combination. The remittance reads 'VENDOR PMT', which suggests a payer that may think it is paying a supplier. Nothing ties this cash to Northstar, so it should not be put on Northstar's account.",
+      "follow_up": "Trace the originating account with the bank and check whether Northside Media is a new customer or a misdirected vendor payment.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-022",
+      "option_id": "HOLD_UNAPPLIED",
+      "rationale": "J SMITH HOLDINGS LLC does not match any customer name or bank alias, and the remittance says only 'PAYMENT' with no document reference. The $12,345.67 amount does not identify an item. Hold in Unapplied Cash until the payer is identified.",
+      "follow_up": "Request originator details from the bank; check recent deals and customer name changes; report as unidentified cash to Treasury.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-024",
+      "option_id": "COMBO_1",
+      "rationale": "Two sets of Brightline's open items sum to $48,000.00. The remittance says 'OCT CAMPAIGN SVCS', and COMBO_1 is INV-24151 and INV-24152, the two invoices dated in October (2026-10-01 and 2026-10-08), both already due. COMBO_2 holds the November invoices, which are not yet due.",
+      "follow_up": "None required; send the application to Brightline with their next statement.",
+      "owner": "AR"
+    },
+    {
+      "exception_id": "EX-DEP-20261116-032",
+      "option_id": "APPLY_AND_RECLASS_DEDUCTION",
+      "rationale": "Kestrel Foods paid $81,600.00 against INV-24181 and the remittance states a makegood deduction for under-delivery on the October flight. The $3,400.00 deduction is a customer claim to validate, not a collectible balance and not within write-off authority. Moving it to Customer Deductions (120300) keeps the aging accurate while Ad Sales confirms the under-delivery.",
+      "follow_up": "Ad Sales to validate the October flight delivery against the makegood claim and approve a credit memo or rebill the $3,400.00.",
+      "owner": "Ad Sales"
+    }
+  ]
+}

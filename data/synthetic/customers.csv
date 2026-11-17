@@ -1,0 +1,26 @@
+customer_id,name,segment,parent_id,terms_days,bank_aliases
+C001,Kestrel Foods Inc,Advertiser,,30,KESTREL FOODS INC
+C002,Brightline Media Agency LLC,Agency,,45,BRIGHTLINE MEDIA AGCY
+C003,Northstar Media Group,Agency,,45,NORTHSTAR MEDIA GROUP INC
+C004,Orbit Holdings Inc,Parent company,,30,ORBIT HOLDINGS INC
+C005,Orbit Media EMEA Ltd,Distribution partner,C004,60,ORBIT MEDIA EMEA
+C006,Pinecrest Studios,Content licensee,,30,PINECREST STUDIOS
+C007,Harbor Light Films,Content licensee,,30,HARBOR LIGHT FILMS
+C008,Cascade Wireless Corp,Distribution partner,,45,CASCADE WIRELESS CORP
+C009,Vantage TV Systems,Device partner,,45,VANTAGE TV SYS
+C010,Summit Beverage Co,Advertiser,,30,SUMMIT BEVERAGE CO
+C011,Meridian Auto Group,Advertiser,,30,MERIDIAN AUTO GRP
+C012,Atlas Broadcasting Nordic AB,Content licensee,,60,ATLAS BROADCASTING NORDIC
+C013,Bluewater Telecom,Distribution partner,,60,BLUEWATER TELECOM
+C014,Ember & Oak Retail,Advertiser,,30,EMBER AND OAK RETAIL
+C015,Quarry Lane Agency,Agency,,45,QUARRY LANE AGENCY
+C016,Solstice Insurance,Advertiser,,30,SOLSTICE INSURANCE CO
+C017,Tidewater Cable,Distribution partner,,45,TIDEWATER CABLE
+C018,Greenfield Pet Co,Advertiser,,30,GREENFIELD PET CO
+C019,Halcyon Pictures APAC,Content licensee,,60,HALCYON PICTURES APAC
+C020,Ironbridge Financial,Advertiser,,30,IRONBRIDGE FINANCIAL
+C021,Crescent Sports Network,Content licensee,,45,CRESCENT SPORTS NETWORK
+C022,Lumen Devices,Device partner,,45,LUMEN DEVICES INC
+C023,Redwood Outfitters,Advertiser,,30,REDWOOD OUTFITTERS
+C024,Polaris Mobile,Distribution partner,,45,POLARIS MOBILE
+C025,Maple & Main Agency,Agency,,45,MAPLE AND MAIN AGENCY

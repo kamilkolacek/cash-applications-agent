@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+
+# Run outputs (a finished sample run is committed under docs/examples/sample_run/)
+outputs/runs/*
+!outputs/runs/.gitkeep
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+~$*.xlsx

@@ -1,0 +1,68 @@
+{
+  "company": "Lumina Streaming Co.",
+  "value_date": "2026-11-16",
+  "deposit_count": 38,
+  "deposit_total": "6188951.06",
+  "auto_count": 28,
+  "auto_amount": "5561625.39",
+  "auto_rate_count_pct": "73.7%",
+  "auto_rate_value_pct": "89.9%",
+  "exception_count": 10,
+  "exception_amount": "627325.67",
+  "auto_by_rule": {
+    "AMOUNT_MATCH": 5,
+    "INVOICE_REFERENCE": 15,
+    "MULTI_INVOICE_SUM": 1,
+    "REMITTANCE_ADVICE": 5,
+    "SMALL_BALANCE_WRITEOFF": 1,
+    "WIRE_BANK_FEE": 1
+  },
+  "exceptions_by_type": {
+    "AMBIGUOUS_MATCH": {
+      "count": 1,
+      "amount": "48000.00"
+    },
+    "DUPLICATE_PAYMENT": {
+      "count": 1,
+      "amount": "23500.00"
+    },
+    "LOW_CONFIDENCE_CUSTOMER": {
+      "count": 2,
+      "amount": "67290.00"
+    },
+    "OVERPAYMENT": {
+      "count": 1,
+      "amount": "66750.00"
+    },
+    "PARTIAL_PAYMENT": {
+      "count": 1,
+      "amount": "155000.00"
+    },
+    "PAYER_MISMATCH": {
+      "count": 2,
+      "amount": "172840.00"
+    },
+    "SHORT_PAY": {
+      "count": 1,
+      "amount": "81600.00"
+    },
+    "UNIDENTIFIED": {
+      "count": 1,
+      "amount": "12345.67"
+    }
+  },
+  "cash_applied": "6143235.39",
+  "on_account": "0.00",
+  "left_unapplied": "45715.67",
+  "left_unapplied_count": 3,
+  "applied_rate_value_pct": "99.3%",
+  "deductions_reclassed": "3400.00",
+  "small_balance_writeoffs": "8.40",
+  "bank_fees": "25.00",
+  "docs_touched": 50,
+  "docs_closed": 49,
+  "ar_relieved": "6146668.79",
+  "journal_lines": 91,
+  "journal_entries": 35,
+  "journal_total_debits": "6152868.79"
+}

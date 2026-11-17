@@ -1,0 +1,534 @@
+{
+  "run_id": "2026-11-16_r01",
+  "exceptions": [
+    {
+      "exception_id": "EX-DEP-20261116-002",
+      "deposit_id": "DEP-20261116-002",
+      "exception_type": "PARTIAL_PAYMENT",
+      "amount": "155000.00",
+      "method": "WIRE",
+      "payer_name": "BLUEWATER TELECOM",
+      "remittance_text": "INV-24191 INSTALLMENT 1 OF 2 PER AGREED PAYMENT PLAN",
+      "customer_id": "C013",
+      "customer_name": "Bluewater Telecom",
+      "evidence": [
+        "Remittance references INV-24191 (open)",
+        "Payment is $155,000.00 less than the open balance of the referenced items"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_PARTIAL_LEAVE_OPEN",
+          "label": "Apply the cash as a partial payment and leave $155,000.00 open",
+          "plan": {
+            "customer_id": "C013",
+            "applications": [
+              {
+                "doc_id": "INV-24191",
+                "amount": "155000.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "155000.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "C013",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "155000.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-003",
+      "deposit_id": "DEP-20261116-003",
+      "exception_type": "PAYER_MISMATCH",
+      "amount": "44200.00",
+      "method": "ACH",
+      "payer_name": "PINECREST STUDIOS",
+      "remittance_text": "INV-24581",
+      "customer_id": "C007",
+      "customer_name": "Harbor Light Films",
+      "evidence": [
+        "Remittance references INV-24581 (open)",
+        "Payer resolves to Pinecrest Studios (C006); the referenced item belongs to Harbor Light Films (C007)",
+        "No parent/subsidiary relationship in the customer master",
+        "Payer's own open item INV-24518 (due 2026-11-09) equals the deposit of $44,200.00"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_TO_REFERENCED_DOC",
+          "label": "Apply to the referenced item(s), leaving $17,700.00 open",
+          "plan": {
+            "customer_id": "C007",
+            "applications": [
+              {
+                "doc_id": "INV-24581",
+                "amount": "44200.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "44200.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "APPLY_TO_PAYER_DOC:INV-24518",
+          "label": "Apply to the payer's own open item INV-24518",
+          "plan": {
+            "customer_id": "C006",
+            "applications": [
+              {
+                "doc_id": "INV-24518",
+                "amount": "44200.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "44200.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "44200.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-008",
+      "deposit_id": "DEP-20261116-008",
+      "exception_type": "OVERPAYMENT",
+      "amount": "66750.00",
+      "method": "ACH",
+      "payer_name": "MERIDIAN AUTO GRP",
+      "remittance_text": "INV-24201",
+      "customer_id": "C011",
+      "customer_name": "Meridian Auto Group",
+      "evidence": [
+        "Remittance references INV-24201 (open)",
+        "Payment exceeds the referenced items by $4,750.00",
+        "INV-24202 (due 2026-11-28) is open for exactly $4,750.00"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_EXCESS:INV-24202",
+          "label": "Apply the referenced items in full and the $4,750.00 excess to INV-24202",
+          "plan": {
+            "customer_id": "C011",
+            "applications": [
+              {
+                "doc_id": "INV-24201",
+                "amount": "62000.00"
+              },
+              {
+                "doc_id": "INV-24202",
+                "amount": "4750.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "66750.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "APPLY_EXCESS_ON_ACCOUNT",
+          "label": "Apply the referenced items in full and hold the $4,750.00 excess as an on-account credit for the customer",
+          "plan": {
+            "customer_id": "C011",
+            "applications": [
+              {
+                "doc_id": "INV-24201",
+                "amount": "62000.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "62000.00",
+            "on_account": "4750.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "C011",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "66750.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-012",
+      "deposit_id": "DEP-20261116-012",
+      "exception_type": "PAYER_MISMATCH",
+      "amount": "128640.00",
+      "method": "WIRE",
+      "payer_name": "ORBIT HOLDINGS INC",
+      "remittance_text": "INV-24221 ON BEHALF OF ORBIT MEDIA EMEA",
+      "customer_id": "C005",
+      "customer_name": "Orbit Media EMEA Ltd",
+      "evidence": [
+        "Remittance references INV-24221 (open)",
+        "Payer resolves to Orbit Holdings Inc (C004); the referenced item belongs to Orbit Media EMEA Ltd (C005)",
+        "Orbit Holdings Inc is the parent of Orbit Media EMEA Ltd in the customer master"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_TO_REFERENCED_DOC",
+          "label": "Apply to the referenced item(s)",
+          "plan": {
+            "customer_id": "C005",
+            "applications": [
+              {
+                "doc_id": "INV-24221",
+                "amount": "128640.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "128640.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "128640.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-015",
+      "deposit_id": "DEP-20261116-015",
+      "exception_type": "LOW_CONFIDENCE_CUSTOMER",
+      "amount": "57420.00",
+      "method": "ACH",
+      "payer_name": "NRTHSTR MEDIA GRP",
+      "remittance_text": "ACH CREDIT",
+      "customer_id": "C003",
+      "customer_name": "Northstar Media Group",
+      "evidence": [
+        "Payer 'NRTHSTR MEDIA GRP' is not a known name; closest customer is Northstar Media Group (C003) at a name score of 0.90",
+        "Deposit equals the open balance of Northstar Media Group's INV-24211"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_TO_CANDIDATE",
+          "label": "Treat the payer as Northstar Media Group and apply to INV-24211",
+          "plan": {
+            "customer_id": "C003",
+            "applications": [
+              {
+                "doc_id": "INV-24211",
+                "amount": "57420.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "57420.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "57420.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-016",
+      "deposit_id": "DEP-20261116-016",
+      "exception_type": "DUPLICATE_PAYMENT",
+      "amount": "23500.00",
+      "method": "ACH",
+      "payer_name": "SOLSTICE INSURANCE CO",
+      "remittance_text": "INV-24231 NOV",
+      "customer_id": "C016",
+      "customer_name": "Solstice Insurance",
+      "evidence": [
+        "Remittance references INV-24231 (closed)",
+        "INV-24231 for $23,500.00 was already paid on 2026-11-06 (ref ACH-1106-4471)"
+      ],
+      "options": [
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "C016",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "23500.00"
+          }
+        },
+        {
+          "option_id": "APPLY_TO_OLDEST_OPEN",
+          "label": "Apply the payment to the customer's oldest open items instead (INV-24232 $18,250.00)",
+          "plan": {
+            "customer_id": "C016",
+            "applications": [
+              {
+                "doc_id": "INV-24232",
+                "amount": "18250.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "18250.00",
+            "on_account": "0.00",
+            "unapplied": "5250.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-021",
+      "deposit_id": "DEP-20261116-021",
+      "exception_type": "LOW_CONFIDENCE_CUSTOMER",
+      "amount": "9870.00",
+      "method": "ACH",
+      "payer_name": "NORTHSIDE MEDIA GRP LLC",
+      "remittance_text": "VENDOR PMT",
+      "customer_id": "C003",
+      "customer_name": "Northstar Media Group",
+      "evidence": [
+        "Payer 'NORTHSIDE MEDIA GRP LLC' is not a known name; closest customer is Northstar Media Group (C003) at a name score of 0.80",
+        "Deposit does not equal any open item or combination for Northstar Media Group"
+      ],
+      "options": [
+        {
+          "option_id": "ON_ACCOUNT_TO_CANDIDATE",
+          "label": "Treat the payer as Northstar Media Group and hold the deposit on account",
+          "plan": {
+            "customer_id": "C003",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "9870.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "9870.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-022",
+      "deposit_id": "DEP-20261116-022",
+      "exception_type": "UNIDENTIFIED",
+      "amount": "12345.67",
+      "method": "ACH",
+      "payer_name": "J SMITH HOLDINGS LLC",
+      "remittance_text": "PAYMENT",
+      "customer_id": "",
+      "customer_name": "",
+      "evidence": [
+        "Payer 'J SMITH HOLDINGS LLC' does not match any customer",
+        "Remittance carries no usable document reference"
+      ],
+      "options": [
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "12345.67"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-024",
+      "deposit_id": "DEP-20261116-024",
+      "exception_type": "AMBIGUOUS_MATCH",
+      "amount": "48000.00",
+      "method": "ACH",
+      "payer_name": "BRIGHTLINE MEDIA AGCY",
+      "remittance_text": "BRIGHTLINE PMT OCT CAMPAIGN SVCS",
+      "customer_id": "C002",
+      "customer_name": "Brightline Media Agency LLC",
+      "evidence": [
+        "2 different sets of Brightline Media Agency LLC's open items sum to the deposit"
+      ],
+      "options": [
+        {
+          "option_id": "COMBO_1",
+          "label": "Apply to INV-24151 (dated 2026-10-01, due 2026-10-31), INV-24152 (dated 2026-10-08, due 2026-11-07)",
+          "plan": {
+            "customer_id": "C002",
+            "applications": [
+              {
+                "doc_id": "INV-24151",
+                "amount": "30000.00"
+              },
+              {
+                "doc_id": "INV-24152",
+                "amount": "18000.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "48000.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "COMBO_2",
+          "label": "Apply to INV-24153 (dated 2026-11-03, due 2026-12-03), INV-24154 (dated 2026-11-05, due 2026-12-05)",
+          "plan": {
+            "customer_id": "C002",
+            "applications": [
+              {
+                "doc_id": "INV-24153",
+                "amount": "24000.00"
+              },
+              {
+                "doc_id": "INV-24154",
+                "amount": "24000.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "48000.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "C002",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "48000.00"
+          }
+        }
+      ]
+    },
+    {
+      "exception_id": "EX-DEP-20261116-032",
+      "deposit_id": "DEP-20261116-032",
+      "exception_type": "SHORT_PAY",
+      "amount": "81600.00",
+      "method": "ACH",
+      "payer_name": "KESTREL FOODS INC",
+      "remittance_text": "INV-24181 LESS MAKEGOOD DED 4PCT UNDERDELIVERY OCT FLIGHT",
+      "customer_id": "C001",
+      "customer_name": "Kestrel Foods Inc",
+      "evidence": [
+        "Remittance references INV-24181 (open)",
+        "Payment is $3,400.00 less than the open balance of the referenced items; remittance cites a deduction (INV-24181 LESS MAKEGOOD DED 4PCT UNDERDELIVERY OCT FLIGHT)",
+        "Deduction of $3,400.00 exceeds the agent write-off authority of $10.00; write-off is not an option"
+      ],
+      "options": [
+        {
+          "option_id": "APPLY_AND_RECLASS_DEDUCTION",
+          "label": "Apply the cash and move the $3,400.00 deduction to Customer Deductions (120300) for validation by the owning team",
+          "plan": {
+            "customer_id": "C001",
+            "applications": [
+              {
+                "doc_id": "INV-24181",
+                "amount": "81600.00"
+              }
+            ],
+            "adjustments": [
+              {
+                "doc_id": "INV-24181",
+                "kind": "DEDUCTION_RECLASS",
+                "amount": "3400.00",
+                "account": "120300"
+              }
+            ],
+            "cash_applied": "81600.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "APPLY_LEAVE_OPEN",
+          "label": "Apply the cash and leave $3,400.00 open on the invoice",
+          "plan": {
+            "customer_id": "C001",
+            "applications": [
+              {
+                "doc_id": "INV-24181",
+                "amount": "81600.00"
+              }
+            ],
+            "adjustments": [],
+            "cash_applied": "81600.00",
+            "on_account": "0.00",
+            "unapplied": "0.00"
+          }
+        },
+        {
+          "option_id": "HOLD_UNAPPLIED",
+          "label": "Leave the full deposit in Unapplied Cash (120900) pending research",
+          "plan": {
+            "customer_id": "C001",
+            "applications": [],
+            "adjustments": [],
+            "cash_applied": "0.00",
+            "on_account": "0.00",
+            "unapplied": "81600.00"
+          }
+        }
+      ]
+    }
+  ]
+}
