@@ -10,7 +10,7 @@
     "remittance_advices_2026-11-16.csv": "b8b202a205a865304f8689193c306f382701fa21d33b6443a622256bc18e34a0",
     "bank_statement_2026-11-16.json": "16699a09041c14de0265ec4e65e372bf877b7d7a7a202204ff89d1824ee18a4b"
   },
-  "code_version": "uncommitted",
+  "code_version": "263523c",
   "status": "PENDING_APPROVAL",
   "approval_basis_sha256": "2b2404f1ca1a2e25372560c87bafd3ea44185b248927abbca991edfc3d825349"
 }
