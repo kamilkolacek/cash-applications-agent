@@ -123,6 +123,12 @@ two-invoice match.
 | `state.json`, `audit.jsonl` | Lifecycle state and the audit trail |
 | `erp_import.csv`, `approval.json` | Only after a person approves |
 
+## Author
+
+Built by [Kamil Kolacek](https://www.linkedin.com/in/kamil-kolacek), Finance
+Transformation and EPM lead, with Claude Code. Questions, issues and pull requests are
+welcome.
+
 ## License
 
 MIT © 2026 Kamil Kolacek
